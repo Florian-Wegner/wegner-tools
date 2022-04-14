@@ -1,5 +1,5 @@
 <?php
-function dcRenommerProjetsDivi()
+function wegnerDcRenommerProjetsDivi()
 {
     // get Options
     $wegner_tools_options = get_option('wegner_tools_option_name'); // Array of All Options
@@ -101,7 +101,7 @@ function dcRenommerProjetsDivi()
         ));
 }
 
-add_action('init', 'dcRenommerProjetsDivi');
+add_action('init', 'wegnerDcRenommerProjetsDivi');
 
 // Order
 /**

@@ -1,5 +1,5 @@
 <?php
-function myfeedRequest($qv)
+function wegnerMyfeedRequest($qv)
 {
     if (isset($qv['feed']) && !isset($qv['post_type'])) {
         $qv['post_type'] = array('post', 'project');
@@ -7,4 +7,4 @@ function myfeedRequest($qv)
 
     return $qv;
 }
-add_filter('request', 'myfeedRequest');
+add_filter('request', 'wegnerMyfeedRequest');

@@ -3,13 +3,13 @@
 define('DISALLOW_FILE_EDIT', true);
 
 /** CSS-Dateien dequeuen und entfernen  **/
-function dpDequeueUnusedStyles()
+function wegnerDpDequeueUnusedStyles()
 {
     //wp_dequeue_script( 'wp-mediaelement' );
     //wp_dequeue_script( 'mediaelement-and-player.min' );
 }
-add_action('wp_enqueue_scripts', 'dp_dequeue_unused_styles');
-function dpDequeueToppostsStyles()
+add_action('wp_enqueue_scripts', 'wegnerDpDequeueUnusedStyles');
+function wegnerDpDequeueToppostsStyles()
 {
     //wp_dequeue_style( 'mediaelement' );
     //wp_deregister_style( 'mediaelement' );
@@ -17,10 +17,10 @@ function dpDequeueToppostsStyles()
     //wp_deregister_style( 'wp-mediaelement' );
     wp_dequeue_style('wp-block-library');
 }
-add_action('wp_print_styles', 'dp_dequeue_topposts_styles');
+add_action('wp_print_styles', 'wegnerDpDequeueToppostsStyles');
 
 /** Hide Usernames from Classes & Hide WordPress Version in Sourcecode Head **/
-function andysRemoveCommentAuthorClass($classes)
+function wegnerAndysRemoveCommentAuthorClass($classes)
 {
     foreach ($classes as $key => $class) {
         if (strstr($class, "comment-author-")) {
@@ -29,7 +29,7 @@ function andysRemoveCommentAuthorClass($classes)
     }
     return $classes;
 }
-add_filter('comment_class', 'andys_remove_comment_author_class');
+add_filter('comment_class', 'wegnerAndysRemoveCommentAuthorClass');
 remove_action('wp_head', 'wp_generator');
 
 /** Schützen Sie Ihr Blog mit einem Plugin vor bösartigen URL-Anfragen **/
@@ -50,7 +50,7 @@ if ($user_ID) {
 }
 
 /** Deaktiviere Embeds in WordPress **/
-function disableEmbedsCodeInit()
+function wegnerDisableEmbedsCodeInit()
 {
     add_filter('embed_oembed_discover', '__return_false');
     remove_filter('oembed_dataparse', 'wp_filter_oembed_result', 10);
@@ -60,13 +60,13 @@ function disableEmbedsCodeInit()
     add_filter('rewrite_rules_array', 'disable_embeds_rewrites');
     remove_filter('pre_oembed_result', 'wp_filter_pre_oembed_result', 10);
 }
-add_action('init', 'disableEmbedsCodeInit', 9999);
+add_action('init', 'wegnerDisableEmbedsCodeInit', 9999);
 
-function disableEmbedsTinyMcePlugin($plugins)
+function wegnerDisableEmbedsTinyMcePlugin($plugins)
 {
     return array_diff($plugins, array('wpembed'));
 }
-function disableEmbedsRewrites($rules)
+function wegnerDisableEmbedsRewrites($rules)
 {
     foreach ($rules as $rule => $rewrite) {
         if (false !== strpos($rewrite, 'embed=true')) {
@@ -78,13 +78,13 @@ function disableEmbedsRewrites($rules)
 
 /** XML-RPC Schnittstelle deaktivieren **/
 add_filter('xmlrpc_enabled', '__return_false');
-function wpsRemoveXPingback($headers)
+function wegnerWpsRemoveXPingback($headers)
 {
     unset($headers['X-Pingback']);
     unset($headers['Pingback']);
     return $headers;
 }
-add_filter('wp_headers', 'wpsRemoveXPingback');
+add_filter('wp_headers', 'wegnerWpsRemoveXPingback');
 
 /** Add to .htaccess
 <Files xmlrpc.php>

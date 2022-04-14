@@ -5,7 +5,7 @@
  * Description:  A small tools for enabling and disabling code snippets via checkboxes
  * Author:       Florian Wegner
  * Author URI:   https://wwww.von-wegner.de/
- * Version:      0.8.2
+ * Version:      1.0.0
  * Text Domain:  wegner-tools
  *
  * @package    wegner-tools
@@ -22,20 +22,27 @@ if (!defined('ABSPATH')) {
 }
 
 // add Settings link
-add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'nc_settings_link');
-function ncSettingsLink($links)
+add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'pluginLinkSettings');
+function pluginLinkSettings($links)
 {
-    $url = esc_url(add_query_arg(
-        'page',
-        'wegner-tools',
-        get_admin_url() . 'admin.php'
-    ));
-    $settings_link = "<a href='$url'>" . __('Settings') . '</a>';
-    array_push(
-        $links,
-        $settings_link
+    $new = array(
+        'wegner-settings' => sprintf(
+            '<a href="%s">%s</a>',
+            esc_url(admin_url('options-general.php?page=wegner-tools')),
+            esc_html__('Settings', 'wegner-tools')
+        ),
+        'wegner-help' => sprintf(
+            '<a href="%s">%s</a>',
+            'mailto:help@von-wegner.de',
+            esc_html__('Help', 'wegner-tools')
+        ),
+        'wegner-github' => sprintf(
+            '<a href="%s" target="_blank">%s</a>',
+            'https://github.com/Florian-Wegner/wegner-tools',
+            esc_html__('GitHub', 'wegner-tools')
+        ),
     );
-    return $links;
+    return array_merge($new, $links);
 }
 
 // start Plugin
