@@ -13,7 +13,7 @@ A small plugin to enable and disable multiple code snippets / tool via checkboxe
 
 == Description ==
 
-The following options are available
+The following options are available:
 
 WP Security
 * Backend themes and plugins - disallow editing
@@ -61,6 +61,9 @@ On GitHub we collect all found bugs to fix them for the next version.
 == Changelog ==
 
 = 1.0.1 =
+* Fixed a bug that prevented the deactivation and activation of the plugin in the manager. 
+
+= 1.0.0 =
 * New README file
 * Add function prefix to avoid collisions with other plugins.
 
@@ -70,4 +73,7 @@ On GitHub we collect all found bugs to fix them for the next version.
 == Upgrade Notice ==
 
 = 1.0.1 =
+If the plugin no longer displays links in the manager, we recommend an update
+
+= 1.0.0 =
 To avoid errors with other plugins, we strongly recommend not to use BETA version (>=0.9.9).

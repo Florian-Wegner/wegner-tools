@@ -10,11 +10,10 @@ Requires PHP: 7.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A small plugin to enable and disable multiple code snippets / tool via checkboxes. There are possibilities to extend and reconfigure the DIVI THEME.
-
 ## Description
 
-The following options are available
+A small plugin to enable and disable multiple code snippets / tool via checkboxes. There are possibilities to extend and reconfigure the DIVI THEME.
+The following options are available:
 
 _WP Security_
 
@@ -59,6 +58,10 @@ On GitHub we collect all found bugs to fix them for the next version.
 
 ### 1.0.1
 
+-   Fixed a bug that prevented the deactivation and activation of the plugin in the manager.
+
+### 1.0.0
+
 -   New README file
 -   Add function prefix to avoid collisions with other plugins.
 
@@ -69,5 +72,9 @@ On GitHub we collect all found bugs to fix them for the next version.
 ## Upgrade Notice
 
 ### 1.0.1
+
+If the plugin no longer displays links in the manager, we recommend an update
+
+### 1.0.0
 
 To avoid errors with other plugins, we strongly recommend not to use BETA version (>=0.9.9).
