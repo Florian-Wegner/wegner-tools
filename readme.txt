@@ -4,7 +4,7 @@ Donate link: https://github.com/sponsors/Florian-Wegner
 Tags: wegner, tools, toolbox, 
 Requires at least: 5.2
 Tested up to: 5.9
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -60,7 +60,7 @@ On GitHub we collect all found bugs to fix them for the next version.
 
 == Changelog ==
 
-= 1.0.0 =
+= 1.0.1 =
 * New README file
 * Add function prefix to avoid collisions with other plugins.
 
@@ -69,5 +69,5 @@ On GitHub we collect all found bugs to fix them for the next version.
 
 == Upgrade Notice ==
 
-= 1.0.0 =
+= 1.0.1 =
 To avoid errors with other plugins, we strongly recommend not to use BETA version (>=0.9.9).

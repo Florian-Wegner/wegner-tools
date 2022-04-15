@@ -5,7 +5,7 @@ Donate link: https://github.com/sponsors/Florian-Wegner
 Tags: wegner, tools, toolbox,
 Requires at least: 5.2
 Tested up to: 5.9
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -30,13 +30,13 @@ _DIVI THEME_
 -   Feed include Divi Projects (RSS-FEED)
 -   Rename projects with user-defined strings
 
-Image Auto-Update Alt & Title
+_Image Auto-Update Alt & Title_
 If an image is subsequently changed in the frontend editor, the changes are automatically applied to the database & media.
 
-Feed include Divi Projects (RSS-FEED)
+_Feed include Divi Projects (RSS-FEED)_
 For some projects you want the DIVI projects to appear in the RSS feed. This setting makes it possible.
 
-Rename projects with user-defined strings
+_Rename projects with user-defined strings_
 Activate the checkbox and enter the new singular and plural name as well as the slug (how the URL should be built). It is also possible to change the category and tag.
 
 ### Usage
@@ -57,7 +57,7 @@ On GitHub we collect all found bugs to fix them for the next version.
 
 ## Changelog
 
-### 1.0.0
+### 1.0.1
 
 -   New README file
 -   Add function prefix to avoid collisions with other plugins.
@@ -68,6 +68,6 @@ On GitHub we collect all found bugs to fix them for the next version.
 
 ## Upgrade Notice
 
-### 1.0.0
+### 1.0.1
 
 To avoid errors with other plugins, we strongly recommend not to use BETA version (>=0.9.9).

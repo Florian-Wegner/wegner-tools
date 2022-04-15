@@ -5,7 +5,7 @@
  * Description:  A small tools for enabling and disabling code snippets via checkboxes
  * Author:       Florian Wegner
  * Author URI:   https://wwww.von-wegner.de/
- * Version:      1.0.0
+ * Version:      1.0.1
  * Text Domain:  wegner-tools
  *
  * @package    wegner-tools
@@ -22,8 +22,8 @@ if (!defined('ABSPATH')) {
 }
 
 // add Settings link
-add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'pluginLinkSettings');
-function pluginLinkSettings($links)
+add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'wegnerPluginLinkSettings');
+function wegnerPluginLinkSettings($links)
 {
     $new = array(
         'wegner-settings' => sprintf(
